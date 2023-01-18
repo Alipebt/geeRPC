@@ -10,8 +10,8 @@ import (
 type GobCodec struct {
 	conn io.ReadWriteCloser //conn 是由构建函数传入，通常是通过 TCP 或者 Unix 建立 socket 时得到的链接实例
 	buf  *bufio.Writer      //buf 是为了防止阻塞而创建的带缓冲的 Writer
-	dec  *gob.Decoder       //编码
-	enc  *gob.Encoder       //解码
+	dec  *gob.Decoder       //解码
+	enc  *gob.Encoder       //编码
 }
 
 // Close implements Codec
@@ -58,6 +58,8 @@ var _ Codec = (*GobCodec)(nil)
 
 func NewGobCodec(conn io.ReadWriteCloser) Codec {
 	buf := bufio.NewWriter(conn)
+
+	//返回初始化
 	return &GobCodec{
 		conn: conn,
 		buf:  buf,
