@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"log"
 	"net"
-	"net/rpc"
 	"time"
 )
 
@@ -18,7 +17,7 @@ func startServer(addr chan string) {
 	}
 	log.Println("start rpc server on ", l.Addr())
 	addr <- l.Addr().String()
-	rpc.Accept(l)
+	geerpc.Accept(l)
 }
 
 func main() {

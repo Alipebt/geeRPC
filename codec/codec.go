@@ -29,7 +29,7 @@ const (
 
 var NewCodecFuncMap map[Type]NewCodecFunc
 
-func int() {
+func init() {
 	NewCodecFuncMap = make(map[Type]NewCodecFunc)
 	NewCodecFuncMap[GobType] = NewGobCodec
 }
