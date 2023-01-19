@@ -130,7 +130,7 @@ func (server *Server) readRequest(cc codec.Codec) (*request, error) {
 	}
 	req := &request{h: h}
 
-	req.argv = reflect.New(reflect.TypeOf("")) //返回指向“”类型的新指针
+	req.argv = reflect.New(reflect.TypeOf("")) //返回指向“”类型的新指针,后续会修改
 
 	if err = cc.ReadBody(req.argv.Interface()); err != nil {
 		//Interface()返回当前的值为Interface{}
