@@ -64,7 +64,7 @@ func New(typ Type ) value
 
 `New` 返回一个 `Value`，表示指向指定类型的新零值的指针。也就是说，返回值的类型是 `PointerTo(typ)`。
 
-`func (Value) Inetrface` 接口：
+`func (Value) Inetrface` ：
 
 接口将` v` 的当前值作为接口{}返回。它相当于：
 
@@ -74,10 +74,18 @@ var i interface{} = (v 的基础值)
 
 如果 `Value` 是通过访问未导出的结构字段获得的，它会发生恐慌。
 
-#### `func (Value) Elem ` 接口：
+`func (Value) Elem ` ：
 
 ```
 func (v Value) Elem() Value
 ```
 
 Elem 返回接口 v 包含的值或指针 v 指向的值。如果 v 的种类不是接口或指针，它会发生恐慌。如果 v 为 nil，则返回零值。
+
+`func Dial`：
+
+```
+func Dial(network, address string) (Conn, error)
+```
+
+拨号(`Dial`)连接到指定网络上的地址。

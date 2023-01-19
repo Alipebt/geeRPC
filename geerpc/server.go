@@ -18,7 +18,7 @@ type Option struct {
 	CodecType   codec.Type //编解码的类型
 }
 
-var DefultOption = &Option{
+var DefaultOption = &Option{
 	MagicNumber: MagicNumber,
 	CodecType:   codec.GobType,
 }
@@ -32,7 +32,7 @@ func NewServer() *Server {
 }
 
 // 作为*Server负责调用server的方法
-var DefultServer = NewServer()
+var DefaultServer = NewServer()
 
 // server的方法
 func (server *Server) Accept(lis net.Listener) {
@@ -50,7 +50,7 @@ func (server *Server) Accept(lis net.Listener) {
 func Accept(lis net.Listener) {
 	//server := new(Server)
 	//server.Accept(lis)
-	DefultServer.Accept(lis)
+	DefaultServer.Accept(lis)
 
 }
 
