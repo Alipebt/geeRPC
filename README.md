@@ -68,7 +68,7 @@ func New(typ Type ) value
 
 接口将` v` 的当前值作为接口{}返回。它相当于：
 
-```
+```go
 var i interface{} = (v 的基础值)
 ```
 
@@ -76,7 +76,7 @@ var i interface{} = (v 的基础值)
 
 `func (Value) Elem ` ：
 
-```
+```go
 func (v Value) Elem() Value
 ```
 
@@ -84,7 +84,7 @@ Elem 返回接口 v 包含的值或指针 v 指向的值。如果 v 的种类不
 
 `func Dial`：
 
-```
+```go
 func Dial(network, address string) (Conn, error)
 ```
 
