@@ -24,7 +24,7 @@ var _ Codec = (*GobCodec)(nil)
 | <------      固定 JSON 编码      ------> | <-------   编码方式由 CodeType 决定  ------->|
 ```
 
-在一次连接中，Option 固定在报文的最开始，Header 和 Body 可以有多个，即报文可能是这样的。
+在一次连接中，Option 固定在报文的最开始，Header 和 Body 可以有多个，即报文可能是这样的：
 
 ```
 | Option | Header1 | Body1 | Header2 | Body2 | ...
