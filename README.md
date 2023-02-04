@@ -43,7 +43,7 @@ lis,_ := net.Listen("tcp",":9999")
 geerpc.Accept(lis)
 ```
 
-`ServeConn` 的实现就和之前讨论的通信过程紧密相关了，首先使用 `json.NewDecoder` 反序列化得到 Option 实例，检查 `MagicNumber` 和` CodeType `的值是否正确。然后根据`CodeType `得到对应的消息编解码器，接下来的处理交给 `serverCodec`。
+`ServeConn` 的实现就和之前讨论的通信过程紧密相关了，首先使用 `json.NewDecoder` 反序列化得到 Option 实例，检查 `MagicNumber` 和` CodeType `的值是否正确。然后根据`CodeType`得到对应的消息编解码器，接下来的处理交给 `serverCodec`。
 
 `serveCodec` 的过程非常简单。主要包含三个阶段
 
@@ -66,7 +66,7 @@ func New(typ Type ) value
 
 `func (Value) Inetrface` ：
 
-接口将` v` 的当前值作为接口{}返回。它相当于：
+接口将`v` 的当前值作为接口{}返回。它相当于：
 
 ```go
 var i interface{} = (v 的基础值)
@@ -74,7 +74,7 @@ var i interface{} = (v 的基础值)
 
 如果 `Value` 是通过访问未导出的结构字段获得的，它会发生恐慌。
 
-`func (Value) Elem ` ：
+`func (Value) Elem` ：
 
 ```go
 func (v Value) Elem() Value
