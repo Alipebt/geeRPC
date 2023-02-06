@@ -88,4 +88,4 @@ Elem 返回接口 v 包含的值或指针 v 指向的值。如果 v 的种类不
 func Dial(network, address string) (Conn, error)
 ```
 
-拨号(`Dial`)连接到指定网络上的地址。
+拨号(`Dial`)连接到指定网络上的地址
