@@ -72,7 +72,7 @@ func New(typ Type ) value
 var i interface{} = (v 的基础值)
 ```
 
-如果 `Value` 是通过访问未导出的结构字段获得的，它会发生恐慌。
+如果 `Value` 是通过访问未导出的结构字段获得的，它会发生恐慌
 
 `func (Value) Elem` ：
 
