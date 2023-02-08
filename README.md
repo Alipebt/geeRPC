@@ -80,7 +80,7 @@ var i interface{} = (v 的基础值)
 func (v Value) Elem() Value
 ```
 
-Elem 返回接口 v 包含的值或指针 v 指向的值。如果 v 的种类不是接口或指针，它会发生恐慌。如果 v 为 nil，则返回零值。
+Elem 返回接口 v 包含的值或指针 v 指向的值。如果 v 的种类不是接口或指针，它会发生恐慌。如果 v 为 nil，则返回零值
 
 `func Dial`：
 
